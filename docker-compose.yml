@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  fileencryptiontool:
+    build: .
+    container_name: file_encryption_tool
+    ports:
+      - "5051:5051"
+    volumes:
+      - .:/app
+    environment:
+      - PORT=5051
+    restart: always
